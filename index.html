@@ -3,15 +3,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/1f3e95df30.js" crossorigin="anonymous"></script>
+  <script src='./script.js'></script>
   <title>Taylor Abrams</title>
 </head>
 <body>
   <nav id='header' class='container'>
-    <a href="index.html" class='currentPage'> Home</a>
+    <a href="index.html" class='currentPage'>Home</a>
     <a href="cv.html"> CV </a>
     <a href="services.html"> Services </a>
-    <a href="writing.html"> Writing</a> 
+    <a id='dropDownLink' href="javascript:void(0)">Writing<i class="fas fa-caret-down "></i></a> 
   </nav>
+<div id="dropDownContainer">
+  <a href="javascript:void(0)" class='writingArticle'>MRP </a>
+  <a href="writing.html" class='writingArticle viewAll'>View all </a>
+</div>
 
   <div class='intro'>
     <div class='overlay'></div>

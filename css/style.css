@@ -44,17 +44,65 @@ body {
     width: 100%;
     z-index: -1; }
   #header a {
-    border-right: white solid 2px;
+    border-left: white solid 2px;
     color: white;
     padding: 1em 0;
     text-decoration: none;
     transition: .25s all ease-out;
     width: 25%; }
+    #header a i {
+      transform: rotate(0deg) translateX(1em);
+      transition: .25s transform ease-out; }
     #header a:hover {
       background: black; }
-  #header a:nth-child(4) {
-    border-right: none; }
+  #header a:nth-child(1) {
+    border-left: none; }
 
+#dropDownContainer {
+  background: black;
+  display: none;
+  right: 0;
+  position: absolute;
+  width: 50%;
+  z-index: 3; }
+  #dropDownContainer a {
+    border: solid white 2px;
+    border-top: none;
+    border-right: none;
+    color: white;
+    display: block;
+    padding: 1em 1em;
+    text-decoration: none;
+    text-align: left; }
+    #dropDownContainer a:hover {
+      background: white;
+      color: black; }
+
+#dropDownLink {
+  border-bottom: solid 2px transparent; }
+
+.dropDownActive {
+  background: black;
+  border-bottom: solid 2px white !important; }
+  .dropDownActive i {
+    transform: rotate(-180deg) !important; }
+
+.viewAll {
+  color: black !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+  .viewAll::before {
+    background: white;
+    content: '';
+    top: .8em;
+    left: 0;
+    position: absolute;
+    height: 1.5em;
+    width: 100%;
+    z-index: -1; }
+
+/*############################HOME PAGE#####################################*/
 .intro {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -170,6 +218,14 @@ body {
           background: black;
           color: white; }
 
+/*############################WRITINGS######################################*/
+.pdfViewer {
+  background: white;
+  display: block;
+  height: calc(100vh - 9em);
+  margin: 1em auto 0 auto;
+  width: calc(100% - 1em); }
+
 footer {
   color: white;
   grid-column: 1/9;
@@ -181,13 +237,17 @@ footer {
   #header a {
     border-bottom: 2px solid white;
     width: 50%; }
-  #header a:nth-child(2) {
-    border-right: none; } }
+  #header a:nth-child(1) {
+    border-left: none; }
+  #header a:nth-child(3) {
+    border-left: none; } }
 
 @media only screen and (min-width: 992px) {
   body {
     background-position: 0% 20%;
     background-attachment: scroll; }
+  #dropDownContainer {
+    width: 25%; }
   .intro {
     height: auto;
     min-height: 100vh;
