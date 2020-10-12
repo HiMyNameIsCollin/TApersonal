@@ -226,16 +226,18 @@ body {
 .pdfViewer {
   background: white;
   display: block;
-  height: calc(100vh - 6em);
+  height: calc(100vh - 3em);
   margin: 1em auto 0 auto;
-  width: calc(100% - 1em); }
+  overflow: auto;
+  width: calc(100% - 2em); }
 
 /*########################################################################*/
 footer {
   color: white;
   grid-column: 1/9;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
 
 /*##############MEDIA QUERIES#################*/
 @media only screen and (max-width: 576px) {
