@@ -26,15 +26,10 @@ body
 	overflow: auto
 
 
-/*##############NAV###############*/
-
-#header
-	color: white
-	flex-wrap: wrap
-	justify-content: space-around
-	text-align: center
+.faded-Black
 	position: relative
 	overflow: hidden
+	z-index: 1
 	&::before
 		background: black
 		content: ''
@@ -45,6 +40,15 @@ body
 		position: absolute
 		width: 100%
 		z-index: -1
+
+
+/*##############NAV###############*/
+
+#header
+	color: white
+	flex-wrap: wrap
+	justify-content: space-around
+	text-align: center
 	a
 		border-left: white solid 2px
 		color: white
@@ -164,7 +168,6 @@ body
 		color: white
 		display: flex
 		grid-column: 1/9
-		height:	100%
 		width: 100%
 		z-index: 2
 		form
@@ -172,19 +175,6 @@ body
 			flex-direction: column
 			justify-content: flex-start
 			padding: 1em
-			position: relative
-			overflow: hidden
-			z-index: 1
-			&::before
-				background: black
-				content: ''
-				height: 100%
-				left: 0
-				opacity: 0.8
-				position: absolute
-				top: 0
-				width: 100%
-				z-index: -1
 			label
 				margin-top: 1em
 			input
@@ -213,6 +203,7 @@ body
 				border-radius: 5px
 				color: black
 				cursor: pointer
+				font-weight: 700
 				letter-spacing: 1.5px
 				margin-top: .5em
 				margin-left: auto
@@ -223,13 +214,31 @@ body
 					color: white
 /*############################WRITINGS######################################*/
 
+.articleFeed
+	height: auto
+	min-height: calc(100vh - 6em)
+	margin: auto
+	width: 50%
+
+.writingPost
+	color: white
+	display: block
+	margin: 1em auto
+	padding: 2em
+	width: 50%
+	a
+		text-decoration: none
+
+
 .pdfViewer
 	background: white
 	display: block
-	height: calc(100vh - 9em)
+	height: calc(100vh - 6em)
 	margin: 1em auto 0 auto
 	width: calc(100% - 1em)
 
+
+/*########################################################################*/
 footer
 	color: white
 	grid-column: 1/9
@@ -271,6 +280,7 @@ footer
 			z-index: 2
 			width: 125%
 		.nameBox
+			height:	calc(100vh - 6em)
 			grid-column: 1/5
 			margin: 2em auto auto 3em
 			width: auto
@@ -284,6 +294,7 @@ footer
 				height: 17em
 				width: 17em
 		.introContact
+			height:	calc(100vh - 6em)
 			grid-column: 5/9
 			form
 				background: none
