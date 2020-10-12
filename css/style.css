@@ -220,9 +220,8 @@ body {
   display: block;
   margin: 1em auto;
   padding: 2em;
+  text-decoration: none;
   width: 50%; }
-  .writingPost a {
-    text-decoration: none; }
 
 .pdfViewer {
   background: white;
