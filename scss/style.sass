@@ -114,6 +114,7 @@ body
 .intro
 	display: grid
 	grid-template-columns: repeat(8, 1fr)
+	grid-template-rows: 1fr
 	height: auto
 	min-height: 100vh
 	position: relative
@@ -223,10 +224,12 @@ body
 .writingPost
 	color: white
 	display: block
-	margin: 1em auto
+	margin: 1em 
 	padding: 2em
 	text-decoration: none
-	width: 50%
+	width: auto
+	h3
+		margin: .5em 0
 
 
 
@@ -257,6 +260,9 @@ footer
 			border-left: none
 		a:nth-child(3)
 			border-left: none
+
+	.articleFeed
+		width: 100%
 
 @media only screen and (min-width: 992px)
 	body
@@ -303,7 +309,7 @@ footer
 				border-radius: 5px
 				height: auto
 				max-height: 75%
-				margin: auto 2em 2em auto
+				margin: auto 2em 0 auto
 				position: relative
 				overflow: hidden
 				width: 50%
@@ -311,9 +317,11 @@ footer
 					background: black
 					color: white
 
+
 @media only screen and (min-width: 1200px)
 	.intro
 		.nameBox
+			height:	calc(100vh - 6em)
 			margin: 2em auto auto 3em
 			img
 				height: 20em
